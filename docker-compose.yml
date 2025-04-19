@@ -1,0 +1,41 @@
+services:
+  frontend:
+    container_name: kupi-frontend
+    env_file: .env
+    build:
+      context: frontend
+      dockerfile: dockerfile
+    image: kupi-frontend-image
+    ports:
+      - 8080:3000
+    networks:
+      - external
+
+  backend:
+    container_name: kupi-backend
+    env_file: .env
+    build:
+      context: backend
+      dockerfile: dockerfile
+    image: kupi-backend-image
+    ports:
+      - 4000:3000
+    networks:
+      - internal
+
+  postgres:
+    container_name: postgres
+    image: postgres:alpine
+    env_file: .env
+    restart: always
+    volumes:
+      - posgres_data:/data/postgres
+    networks:
+      - internal
+
+volumes:
+  posgres_data:
+
+networks:
+  internal:
+  external:
