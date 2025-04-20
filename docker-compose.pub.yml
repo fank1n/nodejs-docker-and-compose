@@ -2,9 +2,6 @@ services:
   frontend:
     container_name: kupi-frontend
     env_file: .env
-    build:
-      context: frontend
-      dockerfile: dockerfile
     image: fank1n/kupi-frontend-image
     ports:
       - 3001:80
@@ -14,9 +11,6 @@ services:
   backend:
     container_name: kupi-backend
     env_file: .env
-    build:
-      context: backend
-      dockerfile: dockerfile
     image: fank1n/kupi-backend-image
     ports:
       - 4000:3000
