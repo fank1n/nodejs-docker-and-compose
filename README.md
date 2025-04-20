@@ -1,3 +1,5 @@
-# Докеризация приложения
+IP адрес 89.169.134.55
 
-Перед тем как приступить к выполнению проектной работы разместите в репозитории исходный код фронтенд и бэкенд частей сервиса КупиПодариДай, реализованного вами ранее. 
+Frontend https://fankin.kupipodaridai.nomorepartiessbs.ru
+
+Backend https://api.fankin.kupipodaridai.nomorepartiessbs.ru
